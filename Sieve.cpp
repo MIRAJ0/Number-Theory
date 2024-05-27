@@ -38,7 +38,7 @@ void sieve(ll slv) {
 
 
 ll slvarr[100005];   //  normal sieve for many use
-ll sieve(ll slv)
+void sieve(ll slv)
 {
 for (int i=2;i<=slv;i++){ 
 if(slvarr[i]==0)

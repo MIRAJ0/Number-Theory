@@ -23,7 +23,7 @@ using namespace std;
 
 
 bool slvarr[100000008];  // fast sieve for only primes .
-vector<ll>primes;
+//vector<ll>primes;
 void sieve(ll slv) {
     memo(slvarr,0);
     for (ll i = 2; i * i <=slv; i++) {
@@ -34,6 +34,17 @@ void sieve(ll slv) {
     // for (ll i=2;i<=slv;i++)
     // if (!slvarr[i])
     // primes.push_back(i);
+}
+
+void sieve(ll slv) {  // faster sieve
+    memo(slvarr, 0);
+    slvarr[0] = slvarr[1] = 1;
+    for (ll i = 4; i <= slv; i += 2) slvarr[i] = 1;
+    for (ll i = 3; i * i <= slv; i += 2) {
+        if (!slvarr[i]) 
+        for (ll j = i * i; j <= slv; j += 2 * i) 
+        slvarr[j] = 1;
+        }
 }
 
 

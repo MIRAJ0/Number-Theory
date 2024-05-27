@@ -22,7 +22,7 @@ using namespace std;
 #define memo(a,b) memset(a,b,sizeof(a))
 
 
-bool slvarr[100000008];
+bool slvarr[100000008];  // fast sieve for only primes .
 vector<ll>primes;
 void sieve(ll slv) {
     memo(slvarr,0);
@@ -35,6 +35,17 @@ void sieve(ll slv) {
     if (!slvarr[i])
     primes.push_back(i);
 }
+
+
+ll slvarr[100005];   //  normal sieve for many use
+ll sieve(ll slv)
+{
+for (int i=2;i<=slv;i++){ 
+if(slvarr[i]==0)
+for (int j=i+i;j<=slv;j+=i)slvarr[j]=1;}
+}
+
+
 
 int main ()
 {

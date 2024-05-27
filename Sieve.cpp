@@ -26,14 +26,14 @@ bool slvarr[100000008];  // fast sieve for only primes .
 vector<ll>primes;
 void sieve(ll slv) {
     memo(slvarr,0);
-    for (ll i = 2; i * i <slv; i++) {
+    for (ll i = 2; i * i <=slv; i++) {
     if (!slvarr[i]) 
-    for (ll j = i * i; j < slv; j += i)
+    for (ll j = i * i; j <=slv; j += i)
     slvarr[j] = 1;
     }
-    for (ll i=2;i<slv;i++)
-    if (!slvarr[i])
-    primes.push_back(i);
+    // for (ll i=2;i<=slv;i++)
+    // if (!slvarr[i])
+    // primes.push_back(i);
 }
 
 

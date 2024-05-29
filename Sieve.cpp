@@ -54,7 +54,7 @@ void sieve(ll slv)
 {
 for (int i=2;i<=slv;i++){ 
 if(slvarr[i]==0)
-for (int j=i+i;j<=slv;j+=i)slvarr[j]=1;}
+for (int j=i*i;j<=slv;j+=i)slvarr[j]=1;}
 }
 
 

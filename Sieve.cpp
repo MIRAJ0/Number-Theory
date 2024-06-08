@@ -59,7 +59,7 @@ for (int j=i*i;j<=slv;j+=i)slvarr[j]=1;}
 
 
 
-const int N = 10000000;    // Linear Sieve (Normally I dont use)
+const int N = 10000000;    // Linear Sieve (Pr for prime and lp for least prime facto)
 vector<int> lp(N+1);
 vector<int> pr;
 for (int i=2; i <= N; ++i) {

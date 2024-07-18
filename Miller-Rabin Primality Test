@@ -1,7 +1,7 @@
 //for finding prine O(k⋅log^3 n).
 
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 

@@ -80,7 +80,8 @@ int main() {
     cin >> Q;
     while (Q--) {
         ll N;
-        cin >> N;
+        cin >> N;    
+        // 5 is a rendom prime number
         if (millerRabinTest(N, 5)) {
             cout << "Yes" << endl;
         } else {
